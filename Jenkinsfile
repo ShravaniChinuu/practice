@@ -1,5 +1,5 @@
 #!groovy
-properties([pipelineTriggers([upstream(threshold: 'UNSTABLE', upstreamProjects: 'upstream'), githubPush()])])
+properties([[$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/ShravaniChinuu/practice.git/'], pipelineTriggers([upstream(threshold: 'UNSTABLE', upstreamProjects: 'upstream'), githubPush()])])
 pipeline {
 	agent any
 	stages {
