@@ -1,5 +1,5 @@
 #!groovy
-properties([pipelineTriggers([upstream('downstream'), githubPush()])])
+properties([pipelineTriggers([upstream('upstreamstream'), githubPush()])])
 pipeline {
 	agent any
 	stages {
@@ -11,7 +11,8 @@ pipeline {
 		stage('Test') {
 			steps {
 				echo 'testing'
-			}
+		                 #### Testing downstraem project
+				 build job: 'downstream'			}
 		}
 	}
 }
