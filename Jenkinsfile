@@ -4,7 +4,11 @@
 pipeline {
 	agent any
 parameters {
-        booleanParam(defaultValue: true, description: '', name: 'userFlag')
+        booleanParam(defaultValue: true, description: 'Select the box to build or not?', name: 'Build')
+	string(defaultValue: '', description: '', name: 'Memory')
+	choice(name: 'Nodes',  choices:"Linux\nMac", description: "Choose Node!")
+             
+	
     }
 	stages {
 		stage('Build') {
