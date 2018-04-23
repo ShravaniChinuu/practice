@@ -1,5 +1,5 @@
 #!groovy
-properties([pipelineTriggers([upstream('upstream'), githubPush()])])
+properties([pipelineTriggers([upstream(threshold: 'UNSTABLE', upstreamProjects: 'upstream'), githubPush()])])
 pipeline {
 	agent any
 	stages {
