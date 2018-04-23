@@ -1,11 +1,11 @@
 #!groovy
-properties([parameters([choice(choices: aws\nazure, description: 'this!', name: 'environment'), 
-			string(defaultValue: '32000', description: 'please provide meory', name: 'memory', trim: false), 
-			booleanParam(defaultValue: false, description: '', name: 'selct defaulst value')])
-	   ])
+
 
 pipeline {
 	agent any
+parameters {
+        booleanParam(defaultValue: true, description: '', name: 'userFlag')
+    }
 	stages {
 		stage('Build') {
 			steps {
