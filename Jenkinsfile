@@ -1,5 +1,5 @@
 #!groovy
-properties([pipelineTriggers([upstream('upstreamstream'), githubPush()])])
+properties([pipelineTriggers([upstream('upstream'), githubPush()])])
 pipeline {
 	agent any
 	stages {
