@@ -11,7 +11,7 @@ pipeline {
 		stage('Test') {
 			steps {
 				echo 'testing'
-		                 #### Testing downstraem project
+		                 echo ' test downstream project'
 				 build job: 'downstream'			}
 		}
 	}
